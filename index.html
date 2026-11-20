@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
 <title>משחק זיכרון חנוכה</title>
+
+<!-- PWA: מניפסט ואייקונים -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<!-- אייפון/אייפד: האייקון שיופיע על מסך הבית -->
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="זיכרון חנוכה">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="application-name" content="זיכרון חנוכה">
+<meta name="description" content="משחק זיכרון שמח לחנוכה לילדים">
+
 <!-- גופן מעוגל עם תמיכה בעברית. בלי אינטרנט – נופל בעדינות לגופן מערכת -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -977,6 +991,19 @@ window.addEventListener('load', layoutBoard);
 window.addEventListener('orientationchange', () => setTimeout(layoutBoard, 300));
 
 newGame();
+
+/* =========================================================
+   8. Service Worker – עבודה בלי אינטרנט
+   נרשם רק כשהדף מוגש מ-http/https (למשל GitHub Pages).
+   בפתיחה מקומית (file://) או בדפדפן שלא תומך – פשוט מדלגים.
+   ========================================================= */
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {
+      /* לא נורא – המשחק עובד גם בלי מצב אופליין */
+    });
+  });
+}
 </script>
 </body>
 </html>

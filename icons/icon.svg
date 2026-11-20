@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- אייקון משחק זיכרון חנוכה: סביבון זהב על רקע כחול.
+       כל התוכן החשוב נמצא בתוך "האזור הבטוח" (עיגול ברדיוס 80%) כדי שיתאים גם כאייקון maskable באנדרואיד. -->
+  <rect width="512" height="512" fill="#1cb0f6"/>
+  <circle cx="256" cy="262" r="196" fill="#4cc3f9"/>
+  <circle cx="256" cy="262" r="150" fill="#6fd0fb"/>
+
+  <!-- ניצוצות -->
+  <g fill="#ffffff">
+    <path d="M118 122 Q118 150 146 150 Q118 150 118 178 Q118 150 90 150 Q118 150 118 122Z"/>
+    <path d="M394 112 Q394 134 416 134 Q394 134 394 156 Q394 134 372 134 Q394 134 394 112Z"/>
+    <path d="M384 340 Q384 362 406 362 Q384 362 384 384 Q384 362 362 362 Q384 362 384 340Z"/>
+  </g>
+  <!-- מטבע שוקולד קטן -->
+  <circle cx="128" cy="368" r="30" fill="#ffc800" stroke="#c99a00" stroke-width="8"/>
+  <circle cx="128" cy="368" r="15" fill="none" stroke="#e0a800" stroke-width="5"/>
+
+  <!-- סביבון -->
+  <rect x="232" y="92" width="48" height="86" rx="20" fill="#ff9600" stroke="#c76b00" stroke-width="10"/>
+  <path d="M172 172 H340 Q366 172 366 198 V292 L256 422 L146 292 V198 Q146 172 172 172Z"
+        fill="#ffc800" stroke="#b88a00" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M256 178 H340 Q360 178 360 198 V290 L256 412Z" fill="#f0b000"/>
+  <text x="236" y="322" font-size="128" font-weight="bold" text-anchor="middle" fill="#1480b3"
+        font-family="Arial, 'Segoe UI', sans-serif">נ</text>
+  <path d="M170 200 V276" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity=".6"/>
+</svg>
